@@ -8,6 +8,8 @@ bike.add_cargo(:apples)
 bike.add_cargo(:water)
 bike.add_cargo(:repair_kit)
 
-puts "Space for #{bike.pannier_remaining_capacity} items left."
+puts "Space for #{bike.items_left} items left."
 
-bike.rent!
+rental1 = Rental.new(bike.id, "11/30/23")
+
+rental1.activate!
